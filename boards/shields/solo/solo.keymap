@@ -64,13 +64,13 @@
         combo_copy_yank {
             timeout-ms = <40>;
             key-positions = <21 22>;
-            bindings = <&kp LG(C)>;
+            bindings = <&kp LC(C)>;
         };
 
 	    combo_paste {
             timeout-ms = <40>;
             key-positions = <22 23>;
-            bindings = <&kp LG(V)>;
+            bindings = <&kp LC(V)>;
         };
 
         combo_app_switcher {
@@ -106,13 +106,13 @@
     	combo_back_history {
             timeout-ms = <40>;
             key-positions = <1 2>;
-            bindings = <&kp LG(LBKT)>;
+            bindings = <&kp LA(LEFT)>;
         };
 
     	combo_forward_history {
             timeout-ms = <40>;
             key-positions = <2 3>;
-            bindings = <&kp LG(RBKT)>;
+            bindings = <&kp LA(RIGHT)>;
         };
 
     	combo_space {
@@ -124,7 +124,7 @@
         combo_refresh {
             timeout-ms = <40>;
             key-positions = <11 13>;
-            bindings = <&kp LG(R)>;
+            bindings = <&kp LC(R)>;
         };
 
         /****************************************
@@ -160,26 +160,26 @@
     	combo_bol {
             timeout-ms = <40>;
             key-positions = <6 7>;
-            bindings = <&kp LG(LEFT)>;
+            bindings = <&kp HOME>;
         };
 
     	combo_eol {
             timeout-ms = <40>;
             key-positions = <7 8>;
-            bindings = <&kp LG(RIGHT)>;
+            bindings = <&kp END>;
         };
 
     	combo_word_left {
             timeout-ms = <40>;
             key-positions = <7 16>;
-            bindings = <&kp LA(LEFT)>;
+            bindings = <&kp LC(LEFT)>;
             layers = <0 1 2 3>;
         };
 
     	combo_word_right {
             timeout-ms = <40>;
             key-positions = <7 18>;
-            bindings = <&kp LA(RIGHT)>;
+            bindings = <&kp LC(RIGHT)>;
             layers = <0 1 2 3>;
         };
 
