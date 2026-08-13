@@ -20,6 +20,7 @@
 #define MOUSE       5
 #define MOUSESLOW   6
 #define SOFTOFF     7
+#define FN			8
 
 &soft_off {
     hold-time-ms = <5000>; // Only turn off if key held for +3s
@@ -300,7 +301,7 @@
         /* 0 */
         default {
             bindings = <
-                &kp Q &kp W &kp F &kp P &mo_kp_tap SOFTOFF B
+                &kp Q &kp W &mo_kp_tap FN F &kp P &mo_kp_tap SOFTOFF B
                 &kp J &kp L &kp U &kp Y &apos_grave
 
                 &mt LC(LA(LSHIFT)) A &mo_kp_tap MOUSE R &mo_kp_tap NAV S &mo_kp_tap NUM T &kp G
@@ -414,5 +415,23 @@
                 &none &none &none &none
             >;
         };
+
+
+        /* 8 */
+        fn {
+            bindings = <
+                &none &sk LALT &trans &sk LCMD &none
+                &kp F13 &kp F7 &kp F8 &kp F9 &kp F10
+
+		        &none &sk LALT &none &sk LCMD &none
+                &kp F14 &kp F4 &kp F5 &kp F6 &kp F11
+
+                &none &none &none &none &none
+                &kp F15 &kp F1 &kp F2 &kp F3 &kp F12
+
+	            &trans &trans &trans &trans
+            >;
+		};
+
 	};
 };
