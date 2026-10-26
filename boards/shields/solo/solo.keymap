@@ -21,6 +21,8 @@
 #define MOUSESLOW   6
 #define SOFTOFF     7
 #define FN			8
+#define GAME        9
+#define GAME2       10
 
 &soft_off {
     hold-time-ms = <5000>; // Only turn off if key held for +3s
@@ -49,6 +51,12 @@
         /****************************************
         ********** Left Hand Combos  ***********
         ****************************************/
+
+        combo_game {
+            timeout-ms = <80>;
+          key-positions =   <20 21 22 23>;
+            bindings = <&tog GAME>;
+        };
 
         combo_ctrl_b {
             timeout-ms = <40>;
@@ -430,6 +438,26 @@
                 &kp F15 &kp F1 &kp F2 &kp F3 &kp F12
 
 	            &trans &trans &trans &trans
+            >;
+		};
+
+        /* 9 */
+        game {
+            bindings = <
+                &kp TAB   &kp Q &kp W &kp E &kp R   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+                &kp LSHFT &kp A &kp S &kp D &kp F   &kp T  &kp G  &kp H  &kp J  &kp K
+                &kp LCTRL &kp Z &kp X &kp C &kp V   &kp B  &kp N  &kp M  &kp I  &kp L
+                                &mo GAME2 &kp SPACE  &kp ENTER &kp ESC
+            >;
+		};
+
+        /* 10 */
+        game2 {
+            bindings = <
+                &kp N1 &kp N2 &trans &kp N3 &kp N4   &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &kp N5   &trans &trans &trans &trans &trans
+                &trans &kp N6 &trans &kp N7 &kp N8   &trans &trans &trans &trans &trans
+                                     &trans &trans   &trans &trans
             >;
 		};
 
